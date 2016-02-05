@@ -3,6 +3,7 @@ package calculator.service;
 import org.springframework.stereotype.Service;
 
 /**
+ * Performs the operations for the calculator.
  * Created by jonathan on 2/2/16.
  */
 @Service
@@ -11,16 +12,16 @@ public class OperationServiceImpl implements OperationService {
     public float doOperation(final float firstOperand, final float secondOperand, final String operator) {
         float result;
         switch (operator) {
-            case "add":
+            case "+":
                 result = firstOperand + secondOperand;
                 break;
-            case "subtract":
+            case "-":
                 result = firstOperand - secondOperand;
                 break;
-            case "multiply":
+            case "X":
                 result = firstOperand * secondOperand;
                 break;
-            case "divide":
+            case "/":
                 result = firstOperand / secondOperand;
                 break;
             default:
