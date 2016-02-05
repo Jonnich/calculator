@@ -1,7 +1,5 @@
 package calculator.service;
 
-import org.springframework.stereotype.Service;
-
 /**
  * Interface for the operation service.
  *
