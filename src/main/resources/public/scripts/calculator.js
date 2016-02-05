@@ -43,33 +43,30 @@ $(
                             }
                             $calcWindow.val(operandTwo);
                         }
-                    } else if (whatWasClicked === "=") { // = was clicked
-                        //$calcWindow.val(eval(operandOne + operator + operandTwo));
+                    } else if (whatWasClicked === "=") {
+                        if (operandOne && operandTwo && operator) {
+                            var args = {
+                                url : "calculator/calculate",
+                                data: {
+                                    operandOne : operandOne,
+                                    operandTwo : operandTwo,
+                                    operator : operator},
+                                dataType : "json",
+                                method : "POST",
+                                success : function(data) {
+                                    $calcWindow.val(data);
+                                },
+                                error : function() {
+                                    $calcWindow.error("No dice.");
+                                }
+                            };
 
-                        var args = {
-                            url : "calculator/calculate",
-                            data: { operandOne : operandOne,
-                                operandTwo : operandTwo,
-                                operator : operator},
-                            dataType : "json",
-                            method : "POST",
-                            success : function(data) {
-                                $calcWindow.val(data);
-                            },
-                            error : function() {
-                                $calcWindow.error("No dice.");
-                            }
-                        };
+                            $.ajax(args);
 
-                        $.ajax(args);
-
-                        operandOne = '';
-                        operandTwo = '';
-                        operator = null;
-
-                        // send operators and operand
-                        // clear operands
-                        // update calculator window
+                            operandOne = '';
+                            operandTwo = '';
+                            operator = null;
+                        }
                     }
                 }
             });
