@@ -10,7 +10,7 @@ import org.springframework.web.bind.annotation.RestController;
  * The REST endpoint for the calculator's calculations.
  * Created by jonathan on 2/5/16.
  */
-@RequestMapping("calculate")
+@RequestMapping("calculator/calculate")
 @RestController
 public class OperationController {
 
