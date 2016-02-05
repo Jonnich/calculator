@@ -11,6 +11,7 @@ public class OperationServiceImpl implements OperationService {
     @Override
     public float doOperation(final float firstOperand, final float secondOperand, final String operator) {
         float result;
+
         switch (operator) {
             case "+":
                 result = firstOperand + secondOperand;
@@ -27,6 +28,7 @@ public class OperationServiceImpl implements OperationService {
             default:
                 throw new UnsupportedOperationException("This operation is not supported by the calculator!");
         }
+
         return result;
     }
 
