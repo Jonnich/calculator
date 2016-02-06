@@ -3,32 +3,37 @@
     <title>Calculator</title>
       <script type="application/javascript" src="scripts/jquery-2.2.0.min.js"></script>
       <script type="application/javascript" src="scripts/calculator.js"></script>
+      <!--Needs to imported after jQuery-->
+      <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.97.5/js/materialize.min.js"></script>
+
+      <link rel="stylesheet" type="text/css" href="style/calculator.css" />
+      <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.97.5/css/materialize.min.css">
   </head>
   <body>
-    <div>
+    <div id="calculatorContent">
         <form id="calculatorForm">
             <input type="text" id="calcWindow" disabled="disabled" width="10" />
 
             <br />
-            <input class="operand" type="button" id="7" value="7"/>
-            <input class="operand" type="button" id="8" value="8"/>
-            <input class="operand" type="button" id="9" value="9"/>
-            <input class="operator" type="button" id="/" value="/"/>
+            <a class="operand waves-effect waves-light btn" type="button" id="7">7</a>
+            <a class="operand waves-effect waves-light btn" type="button" id="8">8</a>
+            <a class="operand waves-effect waves-light btn" type="button" id="9">9</a>
+            <a class="operator waves-effect waves-light btn" type="button" id="/">/</a>
             <br />
-            <input class="operand" type="button" id="4" value="4"/>
-            <input class="operand" type="button" id="5" value="5"/>
-            <input class="operand" type="button" id="6" value="6"/>
-            <input class="operator" type="button" id="X" value="X"/>
+            <a class="operand waves-effect waves-light btn" type="button" id="4">4</a>
+            <a class="operand waves-effect waves-light btn" type="button" id="5">5</a>
+            <a class="operand waves-effect waves-light btn" type="button" id="6">6</a>
+            <a class="operator waves-effect waves-light btn" type="button" id="X">X</a>
             <br />
-            <input class="operand" type="button" id="1" value="1"/>
-            <input class="operand" type="button" id="2" value="2"/>
-            <input class="operand" type="button" id="3" value="3"/>
-            <input class="operator" type="button" id="-" value="-"/>
+            <a class="operand waves-effect waves-light btn" type="button" id="1">1</a>
+            <a class="operand waves-effect waves-light btn" type="button" id="2">2</a>
+            <a class="operand waves-effect waves-light btn" type="button" id="3">3</a>
+            <a class="operator waves-effect waves-light btn" type="button" id="-">-</a>
             <br />
-            <input class="operand" type="button" id="0" value="0"/>
-            <input  type="button" id="." value="."/>
-            <input type="button" id="=" value="=/C"/>
-            <input class="operator" type="button" id="+" value="+"/>
+            <a class="operand waves-effect waves-light btn" type="button" id="0">0</a>
+            <a class="waves-effect waves-light btn" id="." type="button">.</a>
+            <a class="waves-effect waves-light btn" id="=" type="button">=/C</a>
+            <a class="operator waves-effect waves-light btn" type="button">+</a>
         </form>
     </div>
   </body>
