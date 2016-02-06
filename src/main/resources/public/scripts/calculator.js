@@ -47,12 +47,11 @@ $(
                     $calcWindow.val(operandTwo);
                 } else {
                     operator = whatWasClicked;
-                    $("#\\"+whatWasClicked).css("background-color", "226C60");
                 }
             } else {
                 operator = whatWasClicked;
-                $("#\\"+whatWasClicked).css("background-color", "226C60");
             }
+            $("#\\"+operator).css("background-color", "226C60");
         }
 
         /**
