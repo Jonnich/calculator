@@ -18,7 +18,7 @@ public class OperationController {
     public OperationService operationService;
 
     @RequestMapping(method = RequestMethod.POST)
-    public float calculate(long operandOne, long operandTwo, String operator) {
+    public float calculate(float operandOne, float operandTwo, String operator) {
         return operationService.doOperation(operandOne, operandTwo, operator);
     }
 }
