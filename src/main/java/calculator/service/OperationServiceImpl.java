@@ -31,9 +31,4 @@ public class OperationServiceImpl implements OperationService {
 
         return result;
     }
-
-    @Override
-    public boolean validate(float firstOperand, float secondOperand, String operator) {
-        return false;
-    }
 }
