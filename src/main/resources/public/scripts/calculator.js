@@ -81,6 +81,7 @@ $(
             $calcWindow.val('');
             operandOne = '';
             operandTwo = '';
+            $("#\\" + operator).css("background-color", "26A69A");
             operator = null;
         }
 
